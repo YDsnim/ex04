@@ -35,5 +35,16 @@ public class SampleServiceTests {
 		}
 		
 	}
+	@Test
+	public void TestAfterThrowing() {
+		
+		try {
+			log.info("결과값 "+ service.doAdd("ㄱ","4"));
+		} catch (Exception e) {
+			log.info("TestBefore 에러");
+			e.printStackTrace();
+		}
+		
+	}
 	
 }
